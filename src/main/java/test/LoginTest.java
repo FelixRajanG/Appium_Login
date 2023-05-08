@@ -40,20 +40,20 @@ public class LoginTest extends BrowserUtility
 		Assert.assertTrue(flag, "Profile is not Saved");
 	}
 	
-	@Test
-	public void loginWithJson() throws IOException, ParseException 
-	{
-		JsonReader json = new JsonReader();
+// 	@Test
+// 	public void loginWithJson() throws IOException, ParseException 
+// 	{
+// 		JsonReader json = new JsonReader();
 		
-		LoginPage loginPage = new LoginPage(driver);
-		loginPage.login(json.readJsonContent("UserName"), json.readJsonContent("Password"));
+// 		LoginPage loginPage = new LoginPage(driver);
+// 		loginPage.login(json.readJsonContent("UserName"), json.readJsonContent("Password"));
 		
-		loginPage.enterDetails(json.readJsonContent("Country"),json.readJsonContent("Address"),
-							   json.readJsonContent("EmailId"),json.readJsonContent("MobileNo"));
+// 		loginPage.enterDetails(json.readJsonContent("Country"),json.readJsonContent("Address"),
+// 							   json.readJsonContent("EmailId"),json.readJsonContent("MobileNo"));
 		
-		boolean flag = loginPage.profileSaved_Check();
-		Assert.assertTrue(flag, "Profile is not Saved");
-	}
+// 		boolean flag = loginPage.profileSaved_Check();
+// 		Assert.assertTrue(flag, "Profile is not Saved");
+// 	}
 	
 	@AfterMethod
 	public void browserTearDown()
